@@ -1,7 +1,34 @@
+# 代码在分支里面，version:3.1.0.66
+## 代码
+* https://github.com/cixingguangming55555/wechat-bot/tree/feature-framework
+## 功能
+* 获取通讯录好友wxid,名字；
+* 接收文本消息；
+* 发送文本消息;
+* 发送图片；
+* 获取个人微信信息;
+* 获取微信群id和群成员id;
+* 获取群成员昵称，用如下代码，带wxid和roomid,单个获取
+```
+function get_chat_nick_p(wx_id,roomid)
+{
+  const j={
+    id:getid(),
+    type:CHATROOM_MEMBER_NICK,
+    content:roomid,//chatroom id 23023281066@chatroom  17339716569@chatroom
+    wxid:wx_id
+  };
+  const s= JSON.stringify(j);
+  return s;
+}
+```
+* 注：目前只支持ws，接口代码和原有2.9的基本一致，客户端代码参加client.js，变化部分请看消息体，有问题请及时群里沟通
+## 注意
+* 3.1.0.66功能少，代码有重构，稳定性未知，请酌情选用
 # wechat-bot  馈人玫瑰之手，历久犹有余香
-目前支持微信2.9.0.123   
+目前支持微信3.1.0.66   
 针对PC微信的个人机器人成品，学习使用，只提供DLL和客户端代码  
-点整包下载或release，下载最新版本  
+点整包下载或release，下载最新版本  version:
 <p align="center">
   <img src="https://i.loli.net/2020/05/09/HXClIf5A2EpUG4u.png" width="120">
 </p>
@@ -22,16 +49,19 @@
 感谢 诺阳     贡献C#客户端代码  
 感谢 昆明-C#-SakuraYuki 贡献C#客户端代码  
 感谢 Yangself666 贡献[java客户端代码](https://github.com/cixingguangming55555/wechat-bot/issues/60)   
+感谢 tsingly 贡献python客户端代码   
 # 微信版本
 
 微信:[2.8.0.121](https://pan.baidu.com/s/1jrW2HzBxM8wceZRn8hT5UQ)   
 提取码:ye2w   
 微信:[2.9.0.123](https://pan.baidu.com/s/1zRJzwlZ1r8aRBeEc0lg1sw)   
 提取码：j4m0   
+微信：[3.0.1.66](https://pan.baidu.com/s/1HKl7sA61KqCCBo-jGR_R-w)  
+提前码: nf77  
 # 开源
 * [2.7.1.88内存获取用户信息](userlist.cpp)
 # 整包下载
-[整包下载](https://github.com/cixingguangming55555/wechat-bot/archive/3.4.7.66.zip)
+[整包下载](https://github.com/cixingguangming55555/wechat-bot/archive/4.5.7.73.zip)
 # 文档
 [开发文档](https://www.showdoc.cc/wechatbot)
 # 声明
@@ -74,12 +104,6 @@
     <img src="https://i.loli.net/2020/05/09/3m9cRatry4gNnqH.jpg" width="400"/>
 </center>
 
-# 请我喝咖啡
-
-<center class="half">
-    <img src="https://i.loli.net/2020/05/09/bPkaXrnVyzl6ewH.jpg" width="800"/>
-</center>
-
 # 致谢
 感谢 MickeyMi 请我喝咖啡！  
 感谢 vluoyue（罗月）请我喝咖啡！  
@@ -96,3 +120,5 @@
 感谢 * doxsen(微信)请我喝咖啡   
 感谢 * 🌜🌛(微信)请我喝咖啡   
 感谢 * Joz(微信)请我喝咖啡   
+感谢 * 净叶不沉 请我喝咖啡   
+感谢 * 超人不会飞请我喝咖啡
